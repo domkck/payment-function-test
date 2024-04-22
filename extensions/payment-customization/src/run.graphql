@@ -1,0 +1,20 @@
+query RunInput {
+  cart {
+    lines {
+      sellingPlanAllocation {
+        sellingPlan {
+          id
+          name
+          description
+          metafield(namespace: "purple_dot", key: "charged_at_checkout") {
+            value
+          }
+        }
+      }
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+}
